@@ -1,0 +1,17 @@
+﻿@model deportes.domain.Producto
+@{List<SelectListItem> items = (List<SelectListItem>)ViewBag.items; }
+welcome to  create product
+
+<form asp-action="create">
+
+    <label>Ingrese el nombre del producto</label>
+    <input type="text" asp-for="Nombre" />
+    <br />
+    <label>Ingrese costo producto</label>
+    <br />
+    <input type="text" asp-for="Nombre" />
+    <br />
+    @Html.DropDownListFor(x => x.id, items, "selecciona un departamento", new { })
+    <br />
+    <input type="submit" value="Guardar" />
+</form>
